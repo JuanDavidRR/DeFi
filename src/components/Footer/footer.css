@@ -1,0 +1,30 @@
+.footer{
+    width: 100%;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.footer .container{
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));}
+
+.footer h4{
+    font-size: 1.7rem;
+    display: inline-block;
+    border-bottom: 3px solid var(--primary-blue);
+}
+
+.footer p{
+    padding: 1rem 0;
+    font-size: 1.3rem;
+}
+
+.footer a{
+    transition: .4s;
+}
+.footer a:hover{
+    color: var(--primary-blue);
+}

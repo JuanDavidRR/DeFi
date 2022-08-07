@@ -1,0 +1,77 @@
+.clients{
+    width: 100%;
+    padding: 1rem;
+    padding-top: 7rem;
+}
+
+.clients .container{
+    max-width: 1140px;
+    margin: auto;
+}
+
+.clients .container h4{
+    font-size: 1.7rem;
+}
+.clients .container p{
+    font-size: 1.3rem;
+}
+
+.clients-carrousel{
+    width: 100%;
+    overflow-x: auto;
+}
+
+.clients-scroll{
+    margin: 5rem 10px;
+    display: grid;
+    gap: 2.5rem;
+    width: 120%;
+    grid-template-columns: repeat(8, 300px);
+    border-radius: 15px;
+    height: 500px;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+
+}
+
+.clients-carrousel img{
+    width: 100%;
+}
+
+.clients-carrousel h4{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.client-card{
+    border: 2px solid var(--primary-blue);
+    transition: 0.4s;
+    scroll-snap-type: x proximity;
+    scroll-snap-align: center;
+}
+
+.client-card:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 10px 1px var(--primary-blue), 15px 20px 1px  var(--primary-purple);
+
+}
+.client-card-body{
+    padding: 15px 20px;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(45deg, var(--primary-purple) 0%, var(--primary-blue)100%);
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    .clients{
+        padding: 20px;
+    }
+}

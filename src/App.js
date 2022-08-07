@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import  React, {Suspense}  from "react";
 import './App.css';
+import Footer from "./components/Footer/Footer";
+import Hero from "./components/Hero/Hero";
+import Navbar from "./components/Navbar/Navbar";
+const Clients = React.lazy(() => import("./components/Clients/Clients"))
+const Projects = React.lazy(() => import("./components/Projects/Projects"))
+const About = React.lazy(() => import("./components/About/About"))
+const Subscribe = React.lazy(() => import("./components/Subscribe/Subscribe"))
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <Hero id="inicio"/>
+      <Suspense>
+          <About id="nosotros"/>
+          <Projects id="proyectos"/>
+          <Clients id="clientes"/>
+          <Subscribe id="contacto"/>
+      </Suspense> 
+      <Footer/>
     </div>
   );
 }
